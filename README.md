@@ -1,51 +1,24 @@
-# SegNeXt: Rethinking Convolutional Attention Design for Semantic Segmentation (NeurIPS 2022)
+# SegNeXt-FaceParser
 
-![](resources/flops.png)
-
-The repository contains official Pytorch implementations of training and evaluation codes and pre-trained models for **SegNext**. 
-
-For Jittor user, https://github.com/Jittor/JSeg is a jittor version. 
-
-The paper is in [Here](https://arxiv.org/pdf/2209.08575.pdf).
-
-The code is based on [MMSegmentaion v0.24.1](https://github.com/open-mmlab/mmsegmentation/tree/v0.24.1).
+The repository contains a PyTorch implementation of a pre-trained face parser based on **[SegNeXt: Rethinking Convolutional Attention Design for Semantic Segmentation (NeurIPS 2022)](https://arxiv.org/pdf/2209.08575.pdf)**. 
 
 
-## Citation
-If you find our repo useful for your research, please consider citing our paper:
-
-```
-@article{guo2022segnext,
-  title={SegNeXt: Rethinking Convolutional Attention Design for Semantic Segmentation},
-  author={Guo, Meng-Hao and Lu, Cheng-Ze and Hou, Qibin and Liu, Zhengning and Cheng, Ming-Ming and Hu, Shi-Min},
-  journal={arXiv preprint arXiv:2209.08575},
-  year={2022}
-}
-
-
-@article{guo2022visual,
-  title={Visual Attention Network},
-  author={Guo, Meng-Hao and Lu, Cheng-Ze and Liu, Zheng-Ning and Cheng, Ming-Ming and Hu, Shi-Min},
-  journal={arXiv preprint arXiv:2202.09741},
-  year={2022}
-}
-
-
-@inproceedings{
-    ham,
-    title={Is Attention Better Than Matrix Decomposition?},
-    author={Zhengyang Geng and Meng-Hao Guo and Hongxu Chen and Xia Li and Ke Wei and Zhouchen Lin},
-    booktitle={International Conference on Learning Representations},
-    year={2021},
-}
-
-```
+The code is based on [SegNext-official-repo](https://github.com/Visual-Attention-Network/SegNeXt). We use [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ) as the training data.
 
 ## Results
 
 **Notes**: ImageNet Pre-trained models can be found in [TsingHua Cloud](https://cloud.tsinghua.edu.cn/d/c15b25a6745946618462/).
 
 ## Rank 1 on Pascal VOC dataset: [Leaderboard](http://host.robots.ox.ac.uk:8080/leaderboard/displaylb_main.php?challengeid=11&compid=6)
+
+### CelebAMaskHQ
+
+|   Method  |    Backbone     |  Pretrained | Iters | mIoU(ss) | Params | FLOPs  | Config | Download  |
+| :-------: | :-------------: | :-----: | :---: | :--: | :----: | :----: | :----: | :-------: |
+|  SegNeXt  |     MSCAN-T  | IN-1K | 160K | - | 4M | 7G | [-](#)  | [-](#) |
+|  SegNeXt  |     MSCAN-S | IN-1K  | 160K | -  | 14M | 16G | [config](local_configs/segnext/small/segnext.small.512x512.celebamaskhq.160k.py)  | [-](#) |
+|  SegNeXt  |     MSCAN-B  | IN-1K  | 160K | - | 28M | 35G | [-](#)  | [-](#) |
+|  SegNeXt  |     MSCAN-L  | IN-1K  | 160K | - | 49M | 70G | [-](#)  | [-](#) |
 
 ### ADE20K
 
@@ -114,7 +87,47 @@ bash tools/get_flops.py /path/to/config --shape 512 512
 
 For technical problem, please create an issue.
 
-If you have any private question, please feel free to contact me via gmh20@mails.tsinghua.edu.cn.
+## Citation
+If you find this repo useful for your research, please consider citing:
+
+```
+@misc{SegNeXt-FaceParser, 
+  author={Zhian Liu}, 
+  title={SegNeXt-FaceParser}, 
+  year={2023}, 
+  url={https://github.com/e4s2022/SegNeXt-FaceParser} 
+}
+
+@article{guo2022segnext,
+  title={SegNeXt: Rethinking Convolutional Attention Design for Semantic Segmentation},
+  author={Guo, Meng-Hao and Lu, Cheng-Ze and Hou, Qibin and Liu, Zhengning and Cheng, Ming-Ming and Hu, Shi-Min},
+  journal={arXiv preprint arXiv:2209.08575},
+  year={2022}
+}
+
+@inproceedings{CelebAMask-HQ,
+  title={MaskGAN: Towards Diverse and Interactive Facial Image Manipulation},
+  author={Lee, Cheng-Han and Liu, Ziwei and Wu, Lingyun and Luo, Ping},
+  booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2020}
+}
+
+@article{guo2022visual,
+  title={Visual Attention Network},
+  author={Guo, Meng-Hao and Lu, Cheng-Ze and Liu, Zheng-Ning and Cheng, Ming-Ming and Hu, Shi-Min},
+  journal={arXiv preprint arXiv:2202.09741},
+  year={2022}
+}
+
+@inproceedings{
+    ham,
+    title={Is Attention Better Than Matrix Decomposition?},
+    author={Zhengyang Geng and Meng-Hao Guo and Hongxu Chen and Xia Li and Ke Wei and Zhouchen Lin},
+    booktitle={International Conference on Learning Representations},
+    year={2021},
+}
+
+```
 
 
 ## Acknowledgment
