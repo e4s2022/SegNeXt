@@ -62,10 +62,11 @@ data = dict(
         ann_dir='CelebA-HQ-mask/',
         pipeline=test_pipeline,
         split="val_split.txt"),
-    # test=dict(
-    #     type=dataset_type,
-    #     data_root=data_root,
-    #     img_dir='images/validation',
-    #     ann_dir='annotations/validation',
-    #     pipeline=test_pipeline)
+    test=dict(
+        type=dataset_type,
+        data_root=data_root,
+        img_dir='CelebA-HQ-img/',
+        ann_dir='CelebA-HQ-mask/',
+        pipeline=test_pipeline,
+        split="val_split.txt")
 )

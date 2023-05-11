@@ -26,15 +26,15 @@ class _MatrixDecomposition2DBase(nn.Module):
 
         self.rand_init = args.setdefault('RAND_INIT', True)
 
-        print('spatial', self.spatial)
-        print('S', self.S)
-        print('D', self.D)
-        print('R', self.R)
-        print('train_steps', self.train_steps)
-        print('eval_steps', self.eval_steps)
-        print('inv_t', self.inv_t)
-        print('eta', self.eta)
-        print('rand_init', self.rand_init)
+        # print('spatial', self.spatial)
+        # print('S', self.S)
+        # print('D', self.D)
+        # print('R', self.R)
+        # print('train_steps', self.train_steps)
+        # print('eval_steps', self.eval_steps)
+        # print('inv_t', self.inv_t)
+        # print('eta', self.eta)
+        # print('rand_init', self.rand_init)
 
     def _build_bases(self, B, S, D, R, cuda=False):
         raise NotImplementedError
