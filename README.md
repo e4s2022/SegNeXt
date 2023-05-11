@@ -12,13 +12,14 @@ The code is based on [SegNext-official-repo](https://github.com/Visual-Attention
 ## Rank 1 on Pascal VOC dataset: [Leaderboard](http://host.robots.ox.ac.uk:8080/leaderboard/displaylb_main.php?challengeid=11&compid=6)
 
 ### CelebAMaskHQ
+Image 0~27999 for training, 28000~29999 for validation.
 
 |   Method  |    Backbone     |  Pretrained | Iters | mIoU(ss) | Params | FLOPs  | Config | Download  |
 | :-------: | :-------------: | :-----: | :---: | :--: | :----: | :----: | :----: | :-------: |
-|  SegNeXt  |     MSCAN-T  | IN-1K | 160K | - | 4M | 7G | [-](#)  | [-](#) |
-|  SegNeXt  |     MSCAN-S | IN-1K  | 160K | -  | 14M | 16G | [config](local_configs/segnext/small/segnext.small.512x512.celebamaskhq.160k.py)  | [-](#) |
-|  SegNeXt  |     MSCAN-B  | IN-1K  | 160K | - | 28M | 35G | [-](#)  | [-](#) |
-|  SegNeXt  |     MSCAN-L  | IN-1K  | 160K | - | 49M | 70G | [-](#)  | [-](#) |
+|  SegNeXt  |     MSCAN-T  | IN-1K | 160K | - | 4M | 7G | [config](local_configs/segnext/tiny/segnext.tiny.512x512.celebamaskhq.160k.py)  | [-](#) |
+|  SegNeXt  |     MSCAN-S | IN-1K  | 160K | 78.19  | 14M | 16G | [config](local_configs/segnext/small/segnext.small.512x512.celebamaskhq.160k.py)  | [Google Drive](https://drive.google.com/drive/folders/12jOIkj3lZhn4sJ5rN8Y4TUAxiEX0hr79?usp=share_link) |
+|  SegNeXt  |     MSCAN-B  | IN-1K  | 160K | 78.97 | 28M | 35G | [config](local_configs/segnext/base/segnext.base.512x512.celebamaskhq.160k.py)  | [Google Drive](https://drive.google.com/drive/folders/12jOIkj3lZhn4sJ5rN8Y4TUAxiEX0hr79?usp=share_link) |
+|  SegNeXt  |     MSCAN-L  | IN-1K  | 160K | - | 49M | 70G | [config](local_configs/segnext/large/segnext.large.512x512.celebamaskhq.160k.py)  | [-](#) |
 
 ### ADE20K
 
