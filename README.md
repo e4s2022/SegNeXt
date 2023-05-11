@@ -44,12 +44,13 @@ The code is based on [SegNext-official-repo](https://github.com/Visual-Attention
 
 
 ## Installation
-Install the dependencies and download ADE20K according to the guidelines in [MMSegmentation](https://github.com/open-mmlab/mmsegmentation/blob/v0.24.1/docs/en/get_started.md#installation).
+Install the dependencies and download ADE20K according to the guidelines in [MMSegmentation](https://github.com/open-mmlab/mmsegmentation/blob/v0.24.1/docs/en/get_started.md#installation). The code is based on [MMSegmentation-v0.24.1](https://github.com/open-mmlab/mmsegmentation/tree/v0.24.1).
 
 
 ```
-pip install timm
-cd SegNeXt
+pip install openmim
+mim install mmcv-full==1.5.1 mmcls==0.20.1
+cd egNeXt-FaceParser
 python setup.py develop
 ```
 
