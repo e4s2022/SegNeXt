@@ -59,17 +59,12 @@ checkpoint_file = './work_dirs/segnext.small.512x512.celebamaskhq.160k/best_mIoU
 # build the model from a config file and a checkpoint file
 model = init_segmentor(config_file, checkpoint_file, device='cuda:0')
 
-for i in range(20):
-    # test a single image and show the results
-    img = '/mnt/hdd8T/lza/py_projs/SegNeXt/data/CelebAMaskHQ/CelebA-HQ-img/%d.jpg'%(28000+i) 
-    img = mmcv.imread(img)
-    
-    seg_gt = '/mnt/hdd8T/lza/py_projs/SegNeXt/data/CelebAMaskHQ/CelebA-HQ-mask/%d.png'%(28000+i) 
-    seg_gt = mmcv.imread(seg_gt)[:,:,0]
+# test a single image and show the results
+img = './demo/00474.png'
+img = mmcv.imread(img)
 
-    result = inference_segmentor(model, img)
+result = inference_segmentor(model, img)
 
-    
-    # you can change the opacity of the painted segmentation map in (0, 1].
-    show_result(img, result[0], seg_gt = seg_gt, out_file='vis/%d.jpg'%(28000+i), opacity=0.75)
+# you can change the opacity of the painted segmentation map in (0, 1].
+show_result(img, result[0], out_file='./demo/00474_seg_vis.png', opacity=0.5)
 

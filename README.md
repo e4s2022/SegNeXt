@@ -1,5 +1,7 @@
 # SegNeXt-FaceParser
 
+<img src="./demo/00475.png" width="200" height="200"><img src="./demo/00475_seg_vis.png" width="200" height="200"><img src="./demo/00476.png" width="200" height="200"><img src="./demo/00476_seg_vis.png" width="200" height="200">
+
 The repository contains a PyTorch implementation of a pre-trained face parser based on **[SegNeXt: Rethinking Convolutional Attention Design for Semantic Segmentation (NeurIPS 2022)](https://arxiv.org/pdf/2209.08575.pdf)**. 
 
 
